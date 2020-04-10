@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/test1/test1",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test2/test2",
+    "pages/detail/detail",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "关于",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "green",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#00FF99",
+    "selectedColor": "#FF33FF",
+    "color": "#3399FF",
+    "borderStyle": "black",
+    "position": "top",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "logs",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "",
+        "selectedIconPath": ""
+      },
+      {
+        "pagePath": "pages/test1/test1",
+        "text": "test1",
+        "iconPath": "",
+        "selectedIconPath": ""
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  }
+}

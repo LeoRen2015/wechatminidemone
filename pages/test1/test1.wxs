@@ -1,0 +1,17 @@
+function tapName(event, ownerInstance) {
+  console.log('tap wechat', JSON.stringify(event))
+
+};
+
+function touchmove(event,instance){
+  console.log('log event',JSON.stringify(event))
+};
+
+function propobserver (newValue, oldValue,onerInstance,instance){
+  console.log('pro oberserver',newValue,oldValue)
+}
+module.exports.propobserver = propobserver
+module.exports.touchmove = touchmove
+module.exports.tapName = tapName
+
+

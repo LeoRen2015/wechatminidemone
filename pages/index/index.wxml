@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+
+  <image src="../../images/驯龙1.jpg" class="image"> </image>
+  <text>this is 驯龙高手leo</text>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+      <navigator open-type="navigate" url="../test1/test1">跳转到test1</navigator> 
+  </view>
+
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

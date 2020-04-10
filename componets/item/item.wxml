@@ -1,0 +1,10 @@
+<!--componets/item.wxml-->
+<view class="warapper" id = "view" bindtap="onTap">
+<slot name="before"></slot>
+<text>componets/item.wxml+{{pro1}}</text>
+<view wx:for="{{pro2}}"> {{item}} </view>
+<view > {{pro3}} </view>
+<slot name="after"></slot>
+<slot name="third"></slot>
+<button id = "buttonsss" data-aa="ss"  catchtap="onasdfas">点击，我是内部组件button</button>
+</view>

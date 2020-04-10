@@ -1,0 +1,97 @@
+<!--pages/test1/test1.wxml-->
+<navigator open-type="navigate" url="/pages/login/login">点我跳转登录页面</navigator>
+<swiper indicator-dots="{{true}}" indicator-active-color="#fff" autoplay="true" interval="3000" duration="300" circular='true' style="background:red;"  next-margin="50px" current="{{currentIndex}}">
+<view wx:for="{{listData}}" >
+<swiper-item>
+<image src="{{item.url}}" bindtap="fSwiperImage" data-aa="{{index}}" mode="widthFix" style="width:100%,margin:0,10px; overflow:show;"  ></image>
+  <text>{{item.aa}}</text>
+  <text>{{item.bb}}</text>
+</swiper-item>
+</view>
+</swiper>
+<text bindtap="f0"> 点我 返回第一页 </text>
+
+<view><text>{{count}}</text></view>
+<view bindtap="fcount"><text bindtap="fcount">点我+1 </text></view>
+<view class="container">
+<text>pages/test1/test1.wxml</text>
+<text>{{number1}}</text>
+<text>{{text2}}</text>
+
+<view id="viewWeForIf"> 遍历数组+条件判断现实</view>
+<!-- <view wx:for="{{array}}" wx:if="{{ item % 2 ==0}}">{{item}}</view> -->
+<view> 遍历数组+条件判断现实</view>
+<view wx:if = "{{text2 ==='text2'}}"> text2</view>
+<view wx:elif = "{{text2==='text3'}}">  text3 </view>
+<view wx:else> text4</view>
+<wxs module = "m1">
+  var msg = "hello world";
+  var var2 = "var2";
+
+  var getMax = function(array) {
+  var max = undefined;
+  for (var i = 0; i < array.length; ++i) {
+    max = max === undefined ?
+      array[i] :
+      (max >= array[i] ? max : array[i]);
+  }
+  return max;
+}
+
+  module.exports.message= msg;
+  module.exports.var2 = var2;
+  module.exports.getMax = getMax;
+
+</wxs>
+
+<text>{{m1.message}}</text>
+<text>{{m1.var2}}</text>
+<text>{{m1.getMax(array)}}</text>
+<view> 事件</view>
+
+<view id="tapTest" data-hi="wechat" data-bbCc="dfsa" bindtap="tapName"> 戳我</view>
+<wxs module="test1" src="./test1.wxs"/>
+<view bindtap="{{test1.tapName}}">wxs 点击看事件</view>
+<view change:prop="{{test1.propobserver}}" prop="{{propValue}}" bindtouchmove="{{test1.touchmove}}">bindTouchMove</view>
+<image src="../../images/驯龙1.jpg" class="image"></image>
+
+
+
+<view> 组件</view>
+<view>
+  <com1>
+    <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+    <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+    <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+    <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+  </com1>
+</view>
+<view wx:if="{{false}}"><text>asdfs</text></view>
+<view>
+<navigator style='display:block;'  url="/pages/test2/test2" open-type="navigate" class="nav-default" hover-class="nav-hove" >点我跳转普通页面</navigator>
+</view>
+
+<view>
+<navigator style="display:inline; " open-type="switchTab" url="/pages/index/index" class="nav-default" hover-class="nav-hove">请点我跳tab index</navigator>
+</view>
+
+
+<view class="list-display" wx:for="{{listData}}" wx:key="{{index}}">
+<image src="{{item.url}}" class="image-list"></image>
+<view class="detail-list">
+<text> {{item.aa}}</text>
+<text>  {{item.bb}}</text>
+<text> {{index}}</text>
+</view>
+</view>
+<view bindtap="fchangemoveiename"> 点我改变电影名字</view>
+
+<view bindtap="fViewBindTap" id="view" data-aa="aa" data-bbCC="bb">
+<text bindtap="fTextBindTap" id="innnerText"> text 点击 冒泡</text></view>
+<itemm binditemBttonEvent="saas" pro1="43" >
+  <view slot="after"> this is slot after</view>
+  <view slot="before"> this is slot before</view>
+  <view slot="third"> this is slot third</view>
+</itemm>
+
+</view>

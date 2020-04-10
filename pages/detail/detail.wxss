@@ -1,0 +1,9 @@
+/* pages/detail/detail.wxss */
+.detialContainer{
+  position: relative;
+  width: 375rpx;
+  height: 375rpx;
+  background-color: greenyellow;
+  margin-left: 375rpx;
+  margin-top: 375rpx;
+}

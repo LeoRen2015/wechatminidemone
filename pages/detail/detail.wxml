@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<view class="detialContainer">
+<text>this is from swiper {{mid}}</text>
+</view>

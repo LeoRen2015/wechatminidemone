@@ -1,0 +1,44 @@
+/* pages/test1/test1.wxss */
+.container{
+    background-color: grey;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.image{
+  height: 170px;
+  width: 50%;
+  border-radius: 5000px
+}
+view{
+  font-size: 25px;
+  color:green
+}
+
+#viewWeForIf{
+  font-size: 30px;
+  color: blue;
+}
+
+.nav-default{
+  color:blue
+}
+.nav-hove{
+  color: red
+}
+.list-display{
+  display: flex
+}
+.image-list{
+  height: 200rpx;
+  width: 200rpx
+
+}
+.detail-list{
+ display: flex;
+ flex-direction: column;
+}
+
